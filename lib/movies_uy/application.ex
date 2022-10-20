@@ -15,10 +15,11 @@ defmodule MoviesUy.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: MoviesUy.PubSub},
       # Start the Endpoint (http/https)
-      MoviesUyWeb.Endpoint
+      MoviesUyWeb.Endpoint,
       # Start a worker by calling: MoviesUy.Worker.start_link(arg)
       # {MoviesUy.Worker, arg}
-      {Finch, name: MoviesUyFinch}
+      {Finch, name: MoviesUyFinch},
+      {Oban, Application.fetch_env!(:movies_uy, Oban)}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

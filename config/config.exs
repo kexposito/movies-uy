@@ -58,4 +58,15 @@ config :extwitter, :oauth, [
   access_token_secret: System.get_env("TWITTER_ACCESS_TOKEN_SECRET"),
 ]
 
+config :movies_uy, Oban,
+  repo: MoviesUy.Repo,
+  plugins: [
+    Oban.Plugins.Pruner,
+    {Oban.Plugins.Cron,
+      crontab: [
+        {"@daily", MoviesUy.DailyWorker, max_attempts: 1},
+      ]}
+  ],
+  queues: [default: 10]
+
 import_config "#{config_env()}.exs"
