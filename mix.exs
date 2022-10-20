@@ -51,7 +51,8 @@ defmodule MoviesUy.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:finch, "~> 0.13"},
       {:oauther, "~> 1.1"},
-      {:extwitter, "~> 0.12"}
+      {:extwitter, "~> 0.12"},
+      {:oban, "~> 2.13"}
     ]
   end
 
