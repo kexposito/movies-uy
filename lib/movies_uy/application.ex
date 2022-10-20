@@ -18,6 +18,7 @@ defmodule MoviesUy.Application do
       MoviesUyWeb.Endpoint
       # Start a worker by calling: MoviesUy.Worker.start_link(arg)
       # {MoviesUy.Worker, arg}
+      {Finch, name: MoviesUyFinch}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
