@@ -55,6 +55,12 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+    config :extwitter, :oauth, [
+      consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+      consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
+      access_token: System.get_env("TWITTER_ACCESS_TOKEN"),
+      access_token_secret: System.get_env("TWITTER_ACCESS_TOKEN_SECRET"),
+    ]
   # ## Using releases
   #
   # If you are doing OTP releases, you need to instruct Phoenix
@@ -82,4 +88,5 @@ if config_env() == :prod do
   #     config :swoosh, :api_client, Swoosh.ApiClient.Hackney
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
+  #
 end
