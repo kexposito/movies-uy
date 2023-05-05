@@ -1,4 +1,5 @@
 # MoviesUy
+This is the code to create a twitter bot tutorial that you can find https://dev.to/kexposito/creating-a-twitter-bot-with-phoenix-2idc
 
 To start your Phoenix server:
 
